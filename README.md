@@ -17,20 +17,20 @@ Then we generate adversarial data using `generate_adversarial_datasets.py`, this
 We use `save_dataset.py` to read all augmented data and add to origin CodeSearchNet data, then parse the api, tokens and method name, and save all these data to `valid.adv_data.pkl` or `train.adv_data.pkl`. 
 
 
-### Step 1: generate data
+#### Step 1: generate data
 ```python
 python generate_adversarial_datasets.py
 ```
 The output will be the same as in output/ of this repo.
 
-### Step 2: parse and save augmented and origin data 
+#### Step 2: parse and save augmented and origin data 
 all augmented data into origin data, and parse origin and augmented data, save to a new pickle file
 ```python
 python save_dataset.py
 ```
 test data is saved to `test_train.adv_data.pkl`.
 
-### Step 3: run scripts to build different dataset for each baseline
+#### Step 3: run scripts to build different dataset for each baseline
 
 ```python
 python transform2codebert.py
